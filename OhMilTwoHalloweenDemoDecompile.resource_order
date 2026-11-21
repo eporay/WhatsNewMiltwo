@@ -556,6 +556,7 @@
     {"name":"sfx_player_pom_slam","order":48,"path":"sounds/sfx_player_pom_slam/sfx_player_pom_slam.yy",},
     {"name":"sfx_player_pom_step","order":49,"path":"sounds/sfx_player_pom_step/sfx_player_pom_step.yy",},
     {"name":"sfx_player_pom_superjump","order":50,"path":"sounds/sfx_player_pom_superjump/sfx_player_pom_superjump.yy",},
+    {"name":"sfx_playerB5_scream","order":111,"path":"sounds/sfx_playerB5_scream/sfx_playerB5_scream.yy",},
     {"name":"sfx_playerP_jump","order":51,"path":"sounds/sfx_playerP_jump/sfx_playerP_jump.yy",},
     {"name":"sfx_playerP_step","order":52,"path":"sounds/sfx_playerP_step/sfx_playerP_step.yy",},
     {"name":"sfx_playersoda0","order":53,"path":"sounds/sfx_playersoda0/sfx_playersoda0.yy",},

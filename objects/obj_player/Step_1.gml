@@ -11,6 +11,23 @@ if character = 11
             instance_create(0, 0, obj_skateboardViewer);
 			sprayCans = 4
 }
+if character = chars.bacon5
+{
+	if (sprite_index == sprites.mach3turnfall || sprite_index == sprites.mach2turnfall)
+{
+    if (!audio_is_playing(screamsfx))
+        screamsfx = audio_play_sound(sfx_playerB5_scream, 1, true, 1, 0, 2);
+}
+else if (audio_is_playing(screamsfx))
+{
+    audio_stop_sound(screamsfx);
+}
+
+}
+else if (audio_is_playing(screamsfx))
+{
+    audio_stop_sound(screamsfx);
+}
 jumpBuffer = approach(jumpBuffer, 0, 1);
 slapBuffer = approach(slapBuffer, 0, 1);
 playerSounds();
