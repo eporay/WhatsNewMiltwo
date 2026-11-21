@@ -18,7 +18,14 @@ function scr_player_machturn()
         buffers.afterimageBlur = 3;
         create_blur_effect(sprite_index, image_index, x, y, xscale);
     }
+    if character = chars.bacon5 && !grounded
+	{
+		    if (sprite_index == sprites.mach2turn)
+        sprite_index = sprites.mach2turnfall;
+       		    if (sprite_index == sprites.mach3turn)
+        sprite_index = sprites.mach3turnfall;
     
+	}
     if (animation_end() && sprite_index == sprites.mach2turn)
     {
         sprite_index = sprites.mach2turnfall;

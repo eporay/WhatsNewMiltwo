@@ -1,4 +1,4 @@
-isMildred = character == UnknownEnum.Value_0 || character = 12 || character == UnknownEnum.Value_1 || character == UnknownEnum.Value_8 || character = chars.juan
+isMildred = character == UnknownEnum.Value_0 || character = chars.bacon5|| character = 12 || character == UnknownEnum.Value_1 || character == UnknownEnum.Value_8 || character = chars.juan
 
 if (global.pky_jump2)
     jumpBuffer = 15;
