@@ -58,8 +58,8 @@ enum chars
 		skatenic,
 		skateboardmildred,
 		trex, 
-		juan
-		//bacon5,
+		juan,
+		bacon5,
 }
 _ac(UnknownEnum.Value_0, "Mildred");
 _ac(UnknownEnum.Value_1, "Valenta");
@@ -76,6 +76,7 @@ _ac(UnknownEnum.Value_11, "Skateboard Mildred");
 if !code_is_compiled()
 _ac(UnknownEnum.Value_12, "Easttu");
 _ac(UnknownEnum.Value_13, "Pink2");
+_ac(UnknownEnum.Value_14, "Bacon5");
 for (var i = 0; i < array_length(global.PlayerCharacters); i++)
 {
     var _spr = get_baconera(font_kettle, i);

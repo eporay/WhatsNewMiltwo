@@ -399,8 +399,8 @@ function get_baconera(arg0, arg1, arg2 = false)
     if (arg1 == 0)
         return arg0;
     
-    var _arr1 = ["playerV", "milton", "pepperni", "player0", "player1", "player2", "player3", "playersoda", "preoutman", "skatenic", "playerSB", "trex", "pink2"];
-    var _arr2 = ["V", "T", "P", "B0", "B1", "B2", "B3", "SODA", "POM", "S", "SB", "TR", "P2"];
+    var _arr1 = ["playerV", "milton", "pepperni", "player0", "player1", "player2", "player3", "playersoda", "preoutman", "skatenic", "playerSB", "trex", "pink2", "playerB5"];
+    var _arr2 = ["V", "T", "P", "B0", "B1", "B2", "B3", "SODA", "POM", "S", "SB", "TR", "P2", "B5"];
     var _key = string(arg0) + "|" + string(arg1);
     
     if (ds_map_exists(global.__baconera_cache, _key))
