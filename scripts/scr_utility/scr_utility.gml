@@ -483,6 +483,8 @@ function levelgetname(arg0)
         
         case "beaker":
             return "(WIP) Beaker Backyard (Twisted)";
+			case "test":
+			return "fuck ass test room"
     }
     
     return arg0;
