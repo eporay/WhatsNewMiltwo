@@ -1,0 +1,26 @@
+{
+  "$GMSound":"v2",
+  "%Name":"sfx_fialogue1_bacon5",
+  "audioGroupId":{
+    "name":"audioGroupSfx",
+    "path":"audiogroups/audioGroupSfx",
+  },
+  "bitDepth":1,
+  "channelFormat":0,
+  "compression":0,
+  "compressionQuality":4,
+  "conversionMode":0,
+  "duration":14.733061,
+  "exportDir":"",
+  "name":"sfx_fialogue1_bacon5",
+  "parent":{
+    "name":"audioGroupSfx",
+    "path":"folders/Sounds/audioGroupSfx.yy",
+  },
+  "preload":false,
+  "resourceType":"GMSound",
+  "resourceVersion":"2.0",
+  "sampleRate":44100,
+  "soundFile":"sfx_fialogue1_bacon5.mp3",
+  "volume":1.0,
+}

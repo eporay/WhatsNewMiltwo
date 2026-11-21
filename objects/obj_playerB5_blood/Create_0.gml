@@ -1,0 +1,5 @@
+xx = irandom(96)
+yy = irandom(96)
+vsp = random(1)
+hsp = random_range(-0.2,0.2)
+size = random_range(0.5,1.5)

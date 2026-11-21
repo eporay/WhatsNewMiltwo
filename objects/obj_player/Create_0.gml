@@ -3,6 +3,7 @@ audio_sound_loop_end(sfx_playerB5_scream, 0.28);
 uparrow = 0;
 angle = 0;
 screamsfx = -4;
+diesfx = -4;
 ylerpname = 0;
 pink2timer = 0
 toppingstr = [obj_potable0, obj_potable1, obj_potable2, obj_potable3, obj_potable4];

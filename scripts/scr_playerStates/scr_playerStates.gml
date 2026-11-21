@@ -66,6 +66,7 @@ global.states =
 	    coconut_float: 63,
 		jarona: 64,
 		jaronalaunch: 65,
+		slip_bacon5: 66,
 };
 global.state_names = [];
 var keys = struct_get_names(global.states);

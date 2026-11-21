@@ -11,6 +11,18 @@ if character = 11
             instance_create(0, 0, obj_skateboardViewer);
 			sprayCans = 4
 }
+if (sprite_index == spr_playerB5_die)
+{
+   
+    
+    if (!audio_is_playing(diesfx))
+        diesfx = audio_play_sound(sfx_playerB5_brain, 1, true, 1, 0, 0.65);
+}
+else if (audio_is_playing(diesfx))
+{
+    audio_stop_sound(diesfx);
+}
+
 if character = chars.bacon5
 {
 	if (sprite_index == sprites.mach3turnfall || sprite_index == sprites.mach2turnfall)
