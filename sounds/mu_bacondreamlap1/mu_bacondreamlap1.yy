@@ -1,0 +1,26 @@
+{
+  "$GMSound":"v2",
+  "%Name":"mu_bacondreamlap1",
+  "audioGroupId":{
+    "name":"audioGroupMusic",
+    "path":"audiogroups/audioGroupMusic",
+  },
+  "bitDepth":1,
+  "channelFormat":0,
+  "compression":0,
+  "compressionQuality":4,
+  "conversionMode":0,
+  "duration":114.44855,
+  "exportDir":"",
+  "name":"mu_bacondreamlap1",
+  "parent":{
+    "name":"audioGroupMusic",
+    "path":"folders/Sounds/audioGroupMusic.yy",
+  },
+  "preload":false,
+  "resourceType":"GMSound",
+  "resourceVersion":"2.0",
+  "sampleRate":44100,
+  "soundFile":"mu_bacondreamlap1.ogg",
+  "volume":1.0,
+}

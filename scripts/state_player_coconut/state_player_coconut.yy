@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"state_player_coconut",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"state_player_coconut",
+  "parent":{
+    "name":"Scripts",
+    "path":"folders/Scripts.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

@@ -1,0 +1,110 @@
+function scr_player_buzzsaw()
+{
+    if (character == UnknownEnum.Value_1)
+    {
+        scr_playerV_buzzsaw();
+        exit;
+    }
+    
+    image_speed = 0.7;
+    hsp = movespeed * xscale;
+    
+    if (movespeed > 14)
+	{
+		if character = 12
+		{
+		}
+		else
+        movespeed = 14;
+	}
+    var move = global.pky_right + global.pky_left;
+    buffers.afterimageBlur = approach(buffers.afterimageBlur, 0, 1);
+    
+    if (buffers.afterimageBlur == 0)
+    {
+        buffers.afterimageBlur = 3;
+        create_buzzsawAfterimage(sprite_index, image_index, x, y, xscale);
+    }
+    
+    if (global.pky_down2)
+    {
+        if (vsp < 15)
+            vsp = 15;
+        
+        sprite_index = sprites.buzzsawFastFall;
+    }
+    
+    if (vsp >= -5)
+        vsp += 0.15;
+    
+    if (place_meeting(x + sign(hsp), y, obj_solid) && !grounded && !place_meeting(x + sign(hsp), y, obj_metalblock) && !place_meeting(x + sign(hsp), y, obj_secretmetalblock) && !place_meeting(x + hsp, y, obj_destructibles))
+    {
+		if character = 12
+		{
+			 if global.pky_down
+		{
+		        if (vsp < 15)
+            vsp = 15;
+		}
+else if global.pky_jump
+vsp = -15
+       
+        xscale *= -1;
+        create_particleStatic(spr_bangeffect, x, y, 1, 1);
+        FMODevent_oneshot("event:/Sfx/Player/airbump", x, y);
+        image_index = 0;
+        sprite_index = sprites.buzzsawBump;
+		}
+		else
+		{
+        if (vsp < 10)
+            vsp = 10;
+        
+        movespeed = 9;
+        xscale *= -1;
+        create_particleStatic(spr_bangeffect, x, y, 1, 1);
+        FMODevent_oneshot("event:/Sfx/Player/airbump", x, y);
+        image_index = 0;
+        sprite_index = sprites.buzzsawBump;
+		}
+    }
+    
+    if (animation_end() && sprite_index == sprites.buzzsawBump)
+        sprite_index = sprites.buzzsaw;
+    
+    if (grounded)
+    {
+        if (move != 0)
+            xscale = move;
+        
+        if (movespeed < 12)
+            movespeed = 12;
+        
+        flash = true;
+        state = global.states.mach3;
+        sprite_index = sprites.rollgetup;
+        image_index = 0;
+    }
+    
+    doTaunt();
+    
+    if (slapBuffer > 8 || place_meeting(x + xscale, y, obj_metalblock))
+    {
+        slapBuffer = false;
+        
+        if (move != 0)
+            xscale = move;
+        
+        create_particleStatic(spr_crazyrunothereffect, x, y, xscale, 1);
+        create_particleStatic(spr_grabcloud, x, y, xscale, 1);
+        
+        if (movespeed < 13)
+            movespeed = 13;
+        
+        state = global.states.mach3;
+        jumpstop = true;
+        vsp = -7;
+        sprite_index = sprites.buzzsawCancel;
+        image_index = 0;
+    }
+}

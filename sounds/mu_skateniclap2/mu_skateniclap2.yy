@@ -1,0 +1,26 @@
+{
+  "$GMSound":"v2",
+  "%Name":"mu_skateniclap2",
+  "audioGroupId":{
+    "name":"audioGroupMusic",
+    "path":"audiogroups/audioGroupMusic",
+  },
+  "bitDepth":1,
+  "channelFormat":0,
+  "compression":0,
+  "compressionQuality":4,
+  "conversionMode":0,
+  "duration":58.049885,
+  "exportDir":"",
+  "name":"mu_skateniclap2",
+  "parent":{
+    "name":"audioGroupMusic",
+    "path":"folders/Sounds/audioGroupMusic.yy",
+  },
+  "preload":false,
+  "resourceType":"GMSound",
+  "resourceVersion":"2.0",
+  "sampleRate":44100,
+  "soundFile":"mu_skateniclap2.mp3",
+  "volume":1.0,
+}

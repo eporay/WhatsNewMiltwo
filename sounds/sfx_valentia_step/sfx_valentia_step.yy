@@ -1,0 +1,26 @@
+{
+  "$GMSound":"v2",
+  "%Name":"sfx_valentia_step",
+  "audioGroupId":{
+    "name":"audioGroupSfx",
+    "path":"audiogroups/audioGroupSfx",
+  },
+  "bitDepth":1,
+  "channelFormat":0,
+  "compression":0,
+  "compressionQuality":4,
+  "conversionMode":0,
+  "duration":0.17995465,
+  "exportDir":"",
+  "name":"sfx_valentia_step",
+  "parent":{
+    "name":"audioGroupSfx",
+    "path":"folders/Sounds/audioGroupSfx.yy",
+  },
+  "preload":false,
+  "resourceType":"GMSound",
+  "resourceVersion":"2.0",
+  "sampleRate":44100,
+  "soundFile":"sfx_valentia_step.ogg",
+  "volume":1.0,
+}

@@ -1,0 +1,11 @@
+{
+	"option_modded_title_twistpause": "PAUSE STYLE",
+	"option_modded_desc_twistpause": "changes how the pause menu looks",
+	"option_modded_title_voiceclips": "VOICE CLIPS",
+	"option_modded_desc_voiceclips": "toggles voiceclips for characters\nps: change char to fully apply",
+	"menunew_select": "ACTIVE FILE : {0}\n\nLEFT RIGHT : SCROLL BETWEEN LOCATIONS\nJUMP : GO TO LOCATION\n\n\n{1} - {2}\n- {3} -",
+	"menunew_select_hotel0": "SUNNY HOTEL",
+	"menunew_select_hotel1": "HALLOWEEN HOTEL",
+	"menunew_select_hotel2": "DEV HOTEL - ALL LEVELS",
+"option_game_screenshake": "SCREEN SHAKE"
+}

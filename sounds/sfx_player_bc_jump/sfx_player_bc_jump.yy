@@ -1,0 +1,26 @@
+{
+  "$GMSound":"v2",
+  "%Name":"sfx_player_bc_jump",
+  "audioGroupId":{
+    "name":"audioGroupSfx",
+    "path":"audiogroups/audioGroupSfx",
+  },
+  "bitDepth":1,
+  "channelFormat":0,
+  "compression":0,
+  "compressionQuality":4,
+  "conversionMode":0,
+  "duration":1.1650567,
+  "exportDir":"",
+  "name":"sfx_player_bc_jump",
+  "parent":{
+    "name":"audioGroupSfx",
+    "path":"folders/Sounds/audioGroupSfx.yy",
+  },
+  "preload":false,
+  "resourceType":"GMSound",
+  "resourceVersion":"2.0",
+  "sampleRate":44100,
+  "soundFile":"sfx_player_bc_jump.wav",
+  "volume":1.0,
+}

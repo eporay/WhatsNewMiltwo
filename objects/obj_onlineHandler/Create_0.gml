@@ -1,0 +1,84 @@
+lastestMessage = "";
+lastestMessageNum = -4;
+old_lastestMessage = "";
+old_lastestMessageNum = -4;
+ip = "localhost";
+port = 2222;
+playerupdate = 0;
+
+if (global.server < 0)
+{
+    idds = 0;
+    
+    while (idds == 0)
+        idds = irandom(4294967294);
+}
+else
+{
+    prophunt_oldidd = 0;
+    race_ranid = 0;
+    prophunt_ranid = 0;
+    idds = 0;
+}
+
+plrs = ds_map_create();
+plrsconnected = ds_map_create();
+notifs = [];
+oldplayer = 
+{
+    x: 0,
+    y: 0,
+    sprite_index: -4,
+    image_index: 0,
+    xscale: 0,
+    image_alpha: 0,
+    image_blend: c_black,
+    flash: 0,
+    state: 0,
+    depth: 0,
+    spr_palette: 0,
+    palIndex: 0,
+    breakdance: 0,
+    npvariableindex: 0
+};
+playerBuff = buffer_create(256, buffer_fixed, 1);
+
+network_send_packetServ = function(arg0, arg1)
+{
+    if (global.server < 0 && global.client < 0)
+        exit;
+    
+    if (global.server >= 0)
+    {
+        var sockets = ds_map_keys_to_array(plrs);
+        
+        for (var i = 0; i < array_length(sockets); i++)
+        {
+            var _dsmap = plrs[? sockets[i]];
+            network_send_udp(global.server, _dsmap[0], _dsmap[1], arg0, arg1);
+        }
+    }
+    else if (global.client >= 0)
+    {
+        network_send_udp(global.client, ip, port, arg0, arg1);
+    }
+};
+
+create_notifAsyncClientSide = function(arg0, arg1 = -4)
+{
+    var _c = 16777215;
+    var _hash = 0;
+    
+    if (is_string(arg1))
+    {
+        for (var i = 1; i <= string_length(arg1); i++)
+            _hash = ((_hash * 31) + ord(string_char_at(arg1, i))) % 16777216;
+        
+        _c = make_color_hsv(_hash % 256, 60 + (floor(_hash / 256) % 63), 255);
+    }
+    
+    scr_soundeffect(sfx_pop, random_range(0.98, 1.02));
+    array_push(notifs, [arg0, 400, _c]);
+};
+list = 0
+prevlist = 0

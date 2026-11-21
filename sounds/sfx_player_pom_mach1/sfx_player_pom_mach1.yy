@@ -1,0 +1,26 @@
+{
+  "$GMSound":"v2",
+  "%Name":"sfx_player_pom_mach1",
+  "audioGroupId":{
+    "name":"audioGroupSfx",
+    "path":"audiogroups/audioGroupSfx",
+  },
+  "bitDepth":1,
+  "channelFormat":0,
+  "compression":0,
+  "compressionQuality":4,
+  "conversionMode":0,
+  "duration":1.6176645,
+  "exportDir":"",
+  "name":"sfx_player_pom_mach1",
+  "parent":{
+    "name":"audioGroupSfx",
+    "path":"folders/Sounds/audioGroupSfx.yy",
+  },
+  "preload":false,
+  "resourceType":"GMSound",
+  "resourceVersion":"2.0",
+  "sampleRate":44100,
+  "soundFile":"sfx_player_pom_mach1.wav",
+  "volume":1.0,
+}

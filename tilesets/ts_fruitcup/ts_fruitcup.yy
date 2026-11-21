@@ -1,0 +1,38 @@
+{
+  "$GMTileSet":"v1",
+  "%Name":"ts_fruitcup",
+  "autoTileSets":[],
+  "macroPageTiles":{
+    "SerialiseHeight":0,
+    "SerialiseWidth":0,
+    "TileSerialiseData":[],
+  },
+  "name":"ts_fruitcup",
+  "out_columns":24,
+  "out_tilehborder":2,
+  "out_tilevborder":2,
+  "parent":{
+    "name":"texturegroup_game",
+    "path":"folders/Tile Sets/texturegroup_game.yy",
+  },
+  "resourceType":"GMTileSet",
+  "resourceVersion":"2.0",
+  "spriteId":{
+    "name":"tilespr_fruitcup",
+    "path":"sprites/tilespr_fruitcup/tilespr_fruitcup.yy",
+  },
+  "spriteNoExport":true,
+  "textureGroupId":{
+    "name":"texturegroup_game",
+    "path":"texturegroups/texturegroup_game",
+  },
+  "tileAnimationFrames":[],
+  "tileAnimationSpeed":15.00015,
+  "tileHeight":32,
+  "tilehsep":0,
+  "tilevsep":0,
+  "tileWidth":32,
+  "tilexoff":0,
+  "tileyoff":0,
+  "tile_count":589,
+}

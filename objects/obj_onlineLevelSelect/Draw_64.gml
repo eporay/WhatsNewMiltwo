@@ -1,0 +1,10 @@
+draw_set_alpha(0.75);
+draw_set_colour(c_black);
+draw_rectangle(0, 0, 960, 540, false);
+draw_set_alpha(1);
+draw_set_colour(c_white);
+draw_set_font(global.creditsfont);
+draw_set_halign(fa_center);
+draw_text(480, 32, text);
+draw_text(480, 206, global.levels_worldNames[selectedWorld]);
+draw_text(480, 334, string(selectedLevel + 1) + ": " + global.levels_arr[selectedWorld][selectedLevel][2]);

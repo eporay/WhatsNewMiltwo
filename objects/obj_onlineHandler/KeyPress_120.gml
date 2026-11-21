@@ -1,0 +1,1 @@
+get_string_async("Enter your new username:", global.username);

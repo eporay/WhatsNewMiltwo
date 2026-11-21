@@ -1,0 +1,2 @@
+fmod_studio_event_instance_stop(escapeInst, UnknownEnum.Value_1);
+fmod_studio_event_instance_release(escapeInst);

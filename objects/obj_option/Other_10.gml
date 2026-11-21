@@ -1,0 +1,48 @@
+if (!variable_instance_exists(id, "miltwocredits_ready"))
+    miltwocredits_ready = true;
+else
+    exit;
+
+miltwocredits_credits = [["Back", "note : press confirm on any person to see all\nsprites they did or view music tracks they composed..."], ["Pawkone", "director : coder : artist : ideas : etc", spr_milton_rollstart, spr_baconsmacon_deadlintro, spr_baconsmacon_deadloop, spr_bacadmadLocate, spr_minilogo, spr_menunew, spr_menunew_tvhint, spr_gate_shell, spr_floorgate, spr_floorgate_over, spr_uparrow, spr_titlecardShell, spr_titlecardShellTitle1, tilespr_fruitcup, spr_player_skate_jump, spr_preoutman_mach, spr_preoutman_breakdance], ["Targetbuldoser", "artist : composer : ideas", mu_peppernilap1, spr_pepperni_idle, spr_milton_mach1, spr_milton_mach2, spr_milton_mach3turn, spr_milton_wallslide, spr_player0_groundpoundstart, spr_player0_groundpound, spr_player0_groundpoundbump, spr_player0_groundpoundland, spr_playersoda_idle, spr_tv_soda, spr_dressermenu_palgridSODA, spr_dressermenu_palgrid, spr_dressermenu_palgridPOM, spr_dressermenu_palgridB0, spr_dressermenu_palgridB1, spr_dressermenu_palgridB2, spr_dressermenu_palgridB3, spr_dressermenu_palgridT, spr_dressermenu_palgridP, spr_dressermenu_palgridV, spr_titlecardFrontyard, spr_titlecardFrontyardTitle1], ["Polyg0n5", "volunteered artist : artist for og miltu", spr_butterAir, spr_butterGround, spr_pepperni_mach1, spr_pepperni_mach3, spr_pepperni_taunt, spr_milton_jump, spr_milton_fall, spr_milton_land, spr_milton_land2, spr_titlecardFruitcup, spr_titlecardFruitcupTitle1, spr_titlecardFruitcupTitle2, spr_tv_idleanim1T, spr_tv_idleanim2T, spr_tv_idleP, spr_tv_machP, spr_tv_crazyrunP, spr_tv_happyT, spr_tv_escapeP, spr_pepperni_mach3turn, spr_player1_pary, spr_player1_crouch, spr_player1_crouchfall, spr_player1_crouchhop, spr_player1_crouchmove, spr_pleasestandbyT, spr_player_coconut_intro, spr_player_coconut_idle], ["Enno334_123", "volunteered artist", spr_milton_downbox, spr_tv_comboT, spr_milton_superjumpprepstart, spr_milton_superjumpprep, spr_gate_milkshake, spr_gate_milkshakeBG], ["ElCacas.XD.RenovadoXD", "volunteered artist", spr_pepperni_idleanim1, spr_pepperni_crazyrun], ["Shampox_85584", "volunteered artist", spr_gate_crashout], ["Bobbers6921", "volunteered artist", spr_pepperni_mach2], ["CoolGuy_The_Guy", "volunteered composer", mu_peppernilap2], ["MrAlt- (Ex Miltu Member)", "former co director : coder : level designer", spr_bacadmad_face, tilespr_frontyard, tilespr_outbreak, tilespr_hotel2], ["Toasty64 (Ex Miltu Member)", "coder : artist : ideas", spr_player_chat], ["PaintlesNoise (Ex Miltu Member)", "artist", spr_milton_mach3turnfall], ["Eastonthehedghog", "made whats new miltu and whats new miltwo", spr_filler], ["Thefiles123 or RandomSonicFan", "made some skatenic palettes", spr_palette_messed, spr_palette_noisy, spr_palette_polpol, spr_palette_harrypoterobama10]];
+miltwocredits_creditsshow = [];
+miltwocredits_selected = 0;
+miltwocredits_yoffset = 0;
+miltwocredits_starty = [];
+miltwocredits_startoffset = [];
+miltwocredits_extendview_enabled = false;
+miltwocredits_extendview_selected = 0;
+miltwocredits_extendview_music = -4;
+var _yy = 0;
+var kl = array_length(miltwocredits_credits);
+draw_set_font(global.creditsfont);
+
+for (var k = 0; k < kl; k++)
+{
+    miltwocredits_starty[k] = _yy;
+    var ki = miltwocredits_credits[k];
+    var kil = array_length(ki);
+    miltwocredits_creditsshow[k] = [ki[0], ki[1]];
+    _yy += string_height(ki[0]);
+    var _yoffset = 0;
+    
+    for (var j = 2; j < kil; j++)
+    {
+        if (sprite_exists(ki[j]))
+        {
+            var _h = sprite_get_height(ki[j]);
+            
+            if (_h < 350)
+            {
+                array_push(miltwocredits_creditsshow[k], ki[j]);
+                _yoffset = max(_yoffset, _h);
+            }
+        }
+    }
+    
+    _yy += (_yoffset + 48);
+    
+    if (k == 0)
+        _yy += 72;
+    
+    miltwocredits_startoffset[k] = _yoffset + 48;
+}

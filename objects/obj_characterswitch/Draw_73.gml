@@ -1,0 +1,10 @@
+draw_sprite_stretched(spr_box, 0, 680, 60, 128, 150);
+pal_swap_set(global.PlayerCharacters[select].sprites.player.palette, 1, 0);
+draw_sprite_ext((select == UnknownEnum.Value_8) ? spr_soda : sprite_index, image_index, 744, 124, 1, 1, 0, c_white, 1);
+shader_reset();
+draw_set_halign(fa_center);
+draw_set_valign(fa_middle);
+draw_set_alpha(1);
+draw_set_font(global.smallfont);
+draw_text(744, 220, string_lower(global.PlayerCharacters[select].name));
+draw_set_colour(c_white);
