@@ -1,24 +1,24 @@
 if (currentRoom == room)
 {
 	depth = 1;
+	var filler = 0
     if (!sprite_exists(sprite_index))
 	{
-		draw_text_transformed(xlerp, ylerp , "my sprite dosnt exist", global.modifiers.flipped ? -1 : 1, 1, 0);
-		
-        exit;
+
+		var filler = 1
 	}
     
     if (object >= 0)
     {
-        draw_sprite_ext(sprite_index, image_index, xlerp + global.prophuntmode.sprites[object][2], ylerp + global.prophuntmode.sprites[object][3], global.prophuntmode.sprites[object][4] ? xscale : 1, 1, 0, c_white, 1);
+        draw_sprite_ext(filler ? spr_filler : sprite_index, image_index, xlerp + global.prophuntmode.sprites[object][2], ylerp + global.prophuntmode.sprites[object][3], global.prophuntmode.sprites[object][4] ? xscale : 1, 1, 0, c_white, 1);
         exit;
     }
     
-    draw_sprite_ext(sprite_index, image_index, xlerp, ylerp, xscale, 1, image_angle, image_blend, alpha);
+    draw_sprite_ext(filler ? spr_filler : sprite_index, image_index, xlerp, ylerp, xscale, 1, image_angle, image_blend, alpha);
     pal_swap_set(spr_palette, palIndex, false);
-    draw_sprite_ext(sprite_index, image_index, xlerp, ylerp, xscale, 1, image_angle, image_blend, alpha);
+    draw_sprite_ext(filler ? spr_filler : sprite_index, image_index, xlerp, ylerp, xscale, 1, image_angle, image_blend, alpha);
     shader_reset();
-    pattern_draw(sprite_index, image_index, xlerp, ylerp, xscale, 1, image_angle, image_blend, alpha, spr_pattern, spr_playerPatCol, spr_palette, palIndex);
+    pattern_draw(filler ? spr_filler : sprite_index, image_index, xlerp, ylerp, xscale, 1, image_angle, image_blend, alpha, spr_pattern, spr_playerPatCol, spr_palette, palIndex);
     if state = global.states.jaronalaunch 
 {
 	 var _col2 = #2e3192;
@@ -28,13 +28,13 @@ if (currentRoom == room)
                     shader_sset(shd_fullshade);
                     shader_set_uniform_f_array(other.uniformLight, [col[0], col[1], col[2]]);
                     shader_set_uniform_f_array(other.uniformDark, [col2[0], col2[1], col2[2]]);
-					draw_sprite_ext(sprite_index, image_index, xlerp, ylerp, xscale, 1, image_angle, image_blend, alpha);
+					draw_sprite_ext(filler ? spr_filler : sprite_index, image_index, xlerp, ylerp, xscale, 1, image_angle, image_blend, alpha);
 					shader_reset()
 }
     if (flash)
     {
         shader_sset(shd_silo);
-        draw_sprite_ext(sprite_index, image_index, xlerp, ylerp, xscale, 1, image_angle, image_blend, alpha);
+        draw_sprite_ext(filler ? spr_filler : sprite_index, image_index, xlerp, ylerp, xscale, 1, image_angle, image_blend, alpha);
         shader_reset();
     }
     

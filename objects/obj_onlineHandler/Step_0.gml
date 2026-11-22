@@ -40,6 +40,7 @@ if (playerupdate >= 2)
         }
         
         var realInfo = playerUtil_realSpr();
+
         oldplayer = 
         {
             x: obj_player.x,

@@ -79,6 +79,7 @@
     {"name":"inst_107812","path":"rooms/shell_15/shell_15.yy",},
     {"name":"inst_107813","path":"rooms/shell_15/shell_15.yy",},
     {"name":"inst_107814","path":"rooms/shell_15/shell_15.yy",},
+    {"name":"inst_17ABC7FF","path":"rooms/shell_15/shell_15.yy",},
   ],
   "isDnd":false,
   "layers":[
@@ -186,6 +187,7 @@
         {"$GMRInstance":"v4","%Name":"inst_107812","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_107812","objectId":{"name":"obj_doorH","path":"objects/obj_doorH/obj_doorH.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":192.0,"y":1600.0,},
         {"$GMRInstance":"v4","%Name":"inst_107813","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_107813","objectId":{"name":"obj_secretmetalblock","path":"objects/obj_secretmetalblock/obj_secretmetalblock.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":2.0,"scaleY":1.5,"x":192.0,"y":992.0,},
         {"$GMRInstance":"v4","%Name":"inst_107814","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_107814","objectId":{"name":"obj_solid","path":"objects/obj_solid/obj_solid.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":66.0,"scaleY":5.0,"x":320.0,"y":64.0,},
+        {"$GMRInstance":"v4","%Name":"inst_17ABC7FF","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_17ABC7FF","objectId":{"name":"obj_solid","path":"objects/obj_solid/obj_solid.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":4.0,"scaleY":3.0,"x":192.0,"y":128.0,},
       ],"layers":[],"name":"Instances","properties":[],"resourceType":"GMRInstanceLayer","resourceVersion":"2.0","userdefinedDepth":false,"visible":true,},
     {"$GMRTileLayer":"","%Name":"Tiles_3","depth":100,"effectEnabled":true,"effectType":"_filter_tintfilter","gridX":16,"gridY":16,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"layers":[],"name":"Tiles_3","properties":[
         {"name":"g_TintCol","type":1,"value":"#FFEFBFDA",},

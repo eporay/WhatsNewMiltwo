@@ -16,7 +16,8 @@ if (currentRoom == room)
     
     if (sprite_exists(sprite_index))
         ylerpname = lerp(ylerpname, sprite_get_bbox_top(sprite_index), 0.05);
-    
+    else 
+	ylerpname = lerp(ylerpname, sprite_get_bbox_top(spr_filler), 0.05);
     if (breakdance)
     {
         if (breakdanceID == -4)

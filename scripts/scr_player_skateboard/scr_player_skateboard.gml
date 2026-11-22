@@ -164,7 +164,10 @@ function scr_player_skateboardramp()
     }
     
     if (global.pky_down2)
+	{
+		sprite_index = spr_player_piledriver
         vsp = 12;
+	}
 }
 
 function scr_player_skateboardmove()
