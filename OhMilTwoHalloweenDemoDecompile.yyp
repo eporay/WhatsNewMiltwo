@@ -1152,6 +1152,7 @@
     {"id":{"name":"spr_monolithSmoke","path":"sprites/spr_monolithSmoke/spr_monolithSmoke.yy",},},
     {"id":{"name":"spr_mugmonolith_dead","path":"sprites/spr_mugmonolith_dead/spr_mugmonolith_dead.yy",},},
     {"id":{"name":"spr_mugmonolith","path":"sprites/spr_mugmonolith/spr_mugmonolith.yy",},},
+    {"id":{"name":"spr_nineslicetest","path":"sprites/spr_nineslicetest/spr_nineslicetest.yy",},},
     {"id":{"name":"spr_npcborder","path":"sprites/spr_npcborder/spr_npcborder.yy",},},
     {"id":{"name":"spr_npcfont","path":"sprites/spr_npcfont/spr_npcfont.yy",},},
     {"id":{"name":"spr_onewayman","path":"sprites/spr_onewayman/spr_onewayman.yy",},},

@@ -1091,6 +1091,7 @@
     {"name":"spr_monolithSmoke","order":426,"path":"sprites/spr_monolithSmoke/spr_monolithSmoke.yy",},
     {"name":"spr_mugmonolith_dead","order":427,"path":"sprites/spr_mugmonolith_dead/spr_mugmonolith_dead.yy",},
     {"name":"spr_mugmonolith","order":428,"path":"sprites/spr_mugmonolith/spr_mugmonolith.yy",},
+    {"name":"spr_nineslicetest","order":1485,"path":"sprites/spr_nineslicetest/spr_nineslicetest.yy",},
     {"name":"spr_npcborder","order":429,"path":"sprites/spr_npcborder/spr_npcborder.yy",},
     {"name":"spr_npcfont","order":430,"path":"sprites/spr_npcfont/spr_npcfont.yy",},
     {"name":"spr_onewayman","order":431,"path":"sprites/spr_onewayman/spr_onewayman.yy",},

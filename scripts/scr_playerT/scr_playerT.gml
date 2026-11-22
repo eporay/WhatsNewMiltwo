@@ -44,7 +44,8 @@ function scr_player_hammerattack()
 
             FMODevent_oneshot("event:/Sfx/Player/punch", x, y);
         
-        
+        sprite_index = spr_milton_hammerspin_prep_mach4
+		image_index = 0
         FMODevent_oneshot("event:/Sfx/General/Enemy/dart", x, y);
 		plrsnds_play(sfx.slam, x, y);
 		squashX = 1.7

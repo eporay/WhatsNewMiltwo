@@ -6,7 +6,7 @@ if (other.state == global.states.grab || other.state == global.states.hammeratta
         state = global.states.coconut_intro;
         sprite_index = spr_player_coconut_intro;
         image_index = 0;
-		var remastered =1
+		var remastered = character = chars.milton
 		if remastered
 		scr_transfotip("[wave][G] Launch [U][D] Angle Launch [J] Jump");
 		else

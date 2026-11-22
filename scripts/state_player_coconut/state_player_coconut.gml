@@ -16,8 +16,11 @@ function scr_player_coconut_intro()
 
 function scr_player_coconut_gun()
 {
+	if  character = chars.milton
+	{
 		scr_player_coconut_gunREMASTER()
 	exit;
+	}
     hsp = approach(hsp, movespeed * xscale, 0.5);
     var move = global.pky_right + global.pky_left;
     
@@ -124,8 +127,11 @@ function scr_player_coconut_gun()
 
 function scr_player_coconut_shoot()
 {
+	 if character = chars.milton
+	 {
 	scr_player_coconut_shootREMASTER()
 	exit;
+	 }
     image_speed = 0.5;
     hsp = movespeed * xscale;
     movespeed = approach(movespeed, 0, 0.25);
