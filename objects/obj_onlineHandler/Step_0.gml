@@ -56,7 +56,8 @@ if (playerupdate >= 2)
             spr_palette: obj_player.spr_palette,
             palIndex: obj_player.palIndex,
             breakdance: obj_player.breakdancespeed >= 0.5 && obj_player.sprite_index == obj_player.sprites.breakdance,
-			visible: obj_player.visible
+			visible: obj_player.visible,
+		
         };
     }
     
@@ -69,7 +70,9 @@ if (playerupdate >= 2)
     buffer_write(playerBuff, buffer_u16, floor(clamp((p.x / 2) + 64, 0, 65435)));
     buffer_write(playerBuff, buffer_u16, floor(clamp((p.y / 2) + 64, 0, 65435)));
     buffer_write(playerBuff, buffer_u16, room);
+
     buffer_write(playerBuff, buffer_u16, _isprop ? obj_onlineProphunt.sprite_index : p.sprite_index);
+
     buffer_write(playerBuff, buffer_u8, floor(clamp(_isprop ? obj_onlineProphunt.image_index : p.image_index, 0, 255)));
     buffer_write(playerBuff, buffer_u8, floor(clamp(p.image_alpha * 255, 0, 255)));
     buffer_write(playerBuff, buffer_u8, floor(clamp(colour_get_value(p.image_blend), 0, 255)));
@@ -79,7 +82,7 @@ if (playerupdate >= 2)
     buffer_write(playerBuff, buffer_u16, global.patternSpr);
     buffer_write(playerBuff, buffer_u8, p.palIndex);
     
-    if (_prophunt)
+    if (_prophunt || morph)
         buffer_write(playerBuff, buffer_s8, global.prophuntmode.select);
     else
         buffer_write(playerBuff, buffer_s8, -1);

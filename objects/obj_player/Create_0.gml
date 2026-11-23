@@ -10,6 +10,7 @@ toppingstr = [obj_potable0, obj_potable1, obj_potable2, obj_potable3, obj_potabl
 character = UnknownEnum.Value_0;
 isMildred = false;
 characterOld = character;
+deadtimer = 0
 event_user(0);
 depth = 0;
 image_speed = 0.35;

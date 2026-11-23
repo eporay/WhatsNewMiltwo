@@ -61,6 +61,59 @@ function scr_player_slip()
 }
 function scr_player_slip_bacon5()
 {
+	static Savelevel = function()
+	{
+
+		
+        with (obj_onlineHandler)
+        {
+            var _rankString = "D";
+            
+            if (global.collect >= global.Crank)
+                _rankString = "C";
+            
+            if (global.collect >= global.Brank)
+                _rankString = "B";
+            
+            if (global.collect >= global.Arank)
+                _rankString = "A";
+            
+            if (global.collect >= global.Srank)
+                _rankString = "S";
+            
+            if (scr_Prank())
+                _rankString = "P";
+            
+            lastestMessageNum = wrap(lastestMessageNum + 1, 123, 233);
+			if global.racemode.active
+			lastestMessage = $" beat the race in {timeString(global.level_timer)}"
+			else
+            lastestMessage = " beat " + levelgetname(global.level) + " (" + _rankString + " Rank - " + ((global.escapeLap > 0) ? $"Lap {global.escapeLap}" : "No Laps") + ")";
+        }
+        
+xdata_open(global.saveFile);
+		var hasbeaten = xdata_read(global.level, "TimeSet", 0);
+		var personalbest = xdata_read(global.level, "PersonalBest", 0);
+		if !hasbeaten || global.level_timer < personalbest 
+		{
+		xdata_write(global.level, "PersonalBest", global.level_timer);
+		xdata_write(global.level, "TimeSet", 1);
+
+
+		//scr_soundeffect(sfx_newrecord, 1, false);
+		
+		}
+xdata_close()
+        global.combo.savecombo = global.combo.amt;
+        
+        if (global.combo.savecombo > global.combo.highest)
+            global.combo.highest = global.combo.savecombo;
+        
+        if (global.combo.amt > 0 && global.combo.timer > 0)
+            global.collect += (10 * global.combo.savecombo);
+
+        scr_savelevel();
+	}
     hsp = movespeed * xscale;
     image_speed = 0.35;
     
@@ -109,7 +162,7 @@ function scr_player_slip_bacon5()
                 sprite_index = spr_playerB5_die;
                 squashX = 2;
                 squashY = 0.5;
-            
+            Savelevel()
         }
         
         if (irandom(100) == 100 && movespeed == 0)
@@ -120,7 +173,69 @@ function scr_player_slip_bacon5()
 			scr_soundeffect(sfx_playerB5_folp, random_range(0.8, 1.3))
            
         }
+        deadtimer++
+		if deadtimer >= 300
+		{
+			
+			    if (audio_sound_get_asset(global.music) != mu_bacon5dead)
+        scr_music(mu_bacon5dead, true);
+			with (obj_camera)
+			{
+		
+            xOffset = approach(xOffset, 0, 8);
         
+        
+        camera.x = camera.target.x + xOffset;
+
+        var _t = camera.zoom;
+        _t = _t * _t;
+        camera.y = approach(camera.y, camera.target.y, 0.00053) 
+			state = -6
+			var maxx = 0.5
+			    camera.zoom = approach(camera.zoom,maxx, 0.00053);
+				if camera.zoom = maxx
+				{
+
+            		unload_textures(global.level_loaded_pages)
+            if (instance_exists(obj_backtohub))
+                instance_destroy(obj_backtohub);
+            state = global.states.normal
+            with (obj_player)
+            {
+                if (global.level == -4)
+                {
+                    with (obj_music)
+                        stop_music();
+                    
+                    generalReset();
+                    movespeed = 0;
+                    vsp = 0;
+                    hsp = 0;
+                    state = -4;
+                    door = "A";
+                    room_goto(Mainmenu);
+                }
+                else
+                {
+                    with (obj_music)
+                        stop_music();
+                    
+                    generalReset();
+                    movespeed = 0;
+                    vsp = 0;
+                    hsp = 0;
+                    state = -4;
+                    door = "NONE";
+                    room_goto(backtohubRoom);
+                    instance_create(x, y, obj_backtohub);
+                    global.level = -4;
+                    global.resetRoom = -4;
+                }
+            
+        }
+				}
+			}
+		}
         instance_create_depth(x + random_range(-30, 30), y + 40, depth + 1, obj_playerB5_blood);
         movespeed = approach(movespeed, 0, 0.075);
     }

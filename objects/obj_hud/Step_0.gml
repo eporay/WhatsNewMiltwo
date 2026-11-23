@@ -1,5 +1,6 @@
 visible = !(global.escapePartyOver && global.escapeActive);
-
+if obj_player.sprite_index = spr_playerB5_die
+visible = 0
 if (!visible)
 {
     hud_alpha = 0;

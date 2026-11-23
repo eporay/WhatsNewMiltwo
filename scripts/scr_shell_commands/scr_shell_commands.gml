@@ -17,25 +17,20 @@ function meta_explode()
         description: "explodes you"
     };
 }
-/*function meta_timesup()
+function meta_morph()
 {
 	    return 
     {
-        description: "times ups you"
+        description: "makes you able to morph in online mode"
     };
 }
-function sh_timesup(arg0)
+function sh_morph(arg0)
 {
-        with (instance_create(0, 0, obj_technicaldifficulty))
-        {
-            func = function()
-            {
-                with (obj_player)
-                   room_goto(timesup_room);
-            };
-        }
-
-}*/
+        if !instance_exists(obj_onlineMorph)
+	instance_create(0, 0, obj_onlineMorph)
+else
+instance_destroy(obj_onlineMorph)
+}
 
 function sh_explode(arg0)
 {

@@ -139,6 +139,7 @@
     {"name":"obj_oneway","order":111,"path":"objects/obj_oneway/obj_oneway.yy",},
     {"name":"obj_onlineHandler","order":29,"path":"objects/obj_onlineHandler/obj_onlineHandler.yy",},
     {"name":"obj_onlineLevelSelect","order":30,"path":"objects/obj_onlineLevelSelect/obj_onlineLevelSelect.yy",},
+    {"name":"obj_onlineMorph","order":58,"path":"objects/obj_onlineMorph/obj_onlineMorph.yy",},
     {"name":"obj_onlinePlayer","order":114,"path":"objects/obj_onlinePlayer/obj_onlinePlayer.yy",},
     {"name":"obj_onlineProphunt","order":31,"path":"objects/obj_onlineProphunt/obj_onlineProphunt.yy",},
     {"name":"obj_onlineRace","order":32,"path":"objects/obj_onlineRace/obj_onlineRace.yy",},

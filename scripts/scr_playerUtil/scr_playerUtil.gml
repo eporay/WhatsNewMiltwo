@@ -151,6 +151,7 @@ function generalReset()
         visible = true;
         hallway = false;
         super = false;
+		deadtimer = 0
         xscaleMulti = 1;
         yscaleMulti = 1;
         hitstun.is = false;

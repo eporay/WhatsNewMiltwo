@@ -197,6 +197,7 @@
     {"id":{"name":"obj_oneway","path":"objects/obj_oneway/obj_oneway.yy",},},
     {"id":{"name":"obj_onlineHandler","path":"objects/obj_onlineHandler/obj_onlineHandler.yy",},},
     {"id":{"name":"obj_onlineLevelSelect","path":"objects/obj_onlineLevelSelect/obj_onlineLevelSelect.yy",},},
+    {"id":{"name":"obj_onlineMorph","path":"objects/obj_onlineMorph/obj_onlineMorph.yy",},},
     {"id":{"name":"obj_onlinePlayer","path":"objects/obj_onlinePlayer/obj_onlinePlayer.yy",},},
     {"id":{"name":"obj_onlineProphunt","path":"objects/obj_onlineProphunt/obj_onlineProphunt.yy",},},
     {"id":{"name":"obj_onlineRace","path":"objects/obj_onlineRace/obj_onlineRace.yy",},},

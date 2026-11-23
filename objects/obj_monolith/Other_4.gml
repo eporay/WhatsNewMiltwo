@@ -1,4 +1,4 @@
-if global.escapeLap && obj_player.character= chars.bacon5
+if global.escapeLap = 2 && obj_player.character= chars.bacon5
 {
 	instance_create(x + 16, y, obj_slipperybutter_deadly)
 	instance_destroy(id, 0)
