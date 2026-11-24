@@ -284,6 +284,20 @@ function scr_player_groundpound()
             
             plrsnds_play(sfx.slam, x, y);
             create_particleStatic(spr_groundpoundeffect, x, y, 1, -2);
+			if (character == UnknownEnum.Value_2 && !(place_meeting(x, y + 1, obj_platform) && place_meeting(x, y + 1, obj_ladder)))
+            {
+                state = global.states.hammerwirl;
+				movespeed = hsp
+				if abs(movespeed) < 8
+                movespeed = (global.pky_left + global.pky_right) * 8;
+                flash = true;
+                vsp = -16;
+                squashX = 1.3;
+                squashY = 0.8;
+                FMODevent_oneshot("event:/Sfx/Player/hammerbounce", x, y);
+                image_index = 0;
+                sprite_index = spr_milton_superjumpcancel;
+            }
         }
     }
 }

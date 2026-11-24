@@ -1,8 +1,27 @@
 function scr_player_tumble()
 {
+	var newmilt = 1
 	var move = global.pky_right + global.pky_left;
     
-    if (skatenic_is_tornado())
+     if (character == UnknownEnum.Value_2 && !grounded)
+    {
+        if (vsp < 13)
+            vsp = 13;
+        
+        if (movespeed < 6)
+            movespeed = 6;
+        
+        if (move != 0)
+        {
+            xscale = move;
+            
+            if (xscale != sign(hsp))
+                hsp = approach(hsp, movespeed * move, 2);
+            else
+                hsp = approach(hsp, movespeed * move, 1);
+        }
+    }
+    else if (skatenic_is_tornado())
     {
         image_speed = 0.5 * xscale;
         vsp = 24;
@@ -76,10 +95,12 @@ function scr_player_tumble()
         verticalMovespeed = vsp;
         movespeed = hsp;
     }
-        if (jumpBuffer && !grounded && character != UnknownEnum.Value_2)
+        if (jumpBuffer && !grounded )
         {
             vsp = -6;
             sprite_index = sprites.divebomb;
+			            if (character == UnknownEnum.Value_2)
+                sprite_index = sprites.groundpoundstart;
             image_index = 0;
             state = global.states.groundpoundstart;
             squashX = 1.3;
@@ -205,23 +226,29 @@ function scr_player_tumble()
     if (character == UnknownEnum.Value_2 && movespeed > 6)
         movespeed -= 0.02;
 	}
-    if !skatenic_is_tornado() && ((place_meeting(x + sign(hsp), y, obj_solid) && !scr_slope(x, y + 1)) || (place_meeting(x + sign(hsp), y - 6, obj_solid) && !place_meeting(x, y - 6, obj_solid)))
+    if ((character == UnknownEnum.Value_2 && !grounded) && (place_meeting(x + xscale + hsp, y - 6, obj_solid) && !place_meeting(x, y - 6, obj_solid)))
+    {
+        FMODevent_oneshot("event:/Sfx/Player/hammerbounce", x, y);
+        create_particleStatic(spr_miltonEffect, x + (5 * xscale), y, 1, -2);
+        xscale *= -1;
+        movespeed = min(20, max(movespeed, (move != 0) ? 17 : 8));
+        hsp = xscale * movespeed;
+        squashX = 1.3;
+        squashY = 0.8;
+    }
+    else if (!skatenic_is_tornado() && ((place_meeting(x + xscale, y, obj_solid) && !scr_slope(x + xscale, y + 1)) || (place_meeting(x + xscale, y - 6, obj_solid) && !place_meeting(x, y - 6, obj_solid))))
     {
         if (character == UnknownEnum.Value_2)
         {
             FMODevent_oneshot("event:/Sfx/Player/hammerbounce", x, y);
             create_particleStatic(spr_miltonEffect, x + (5 * xscale), y, 1, -2);
             xscale *= -1;
+            movespeed = min(20, max(movespeed + 1, 8));
+            hsp = xscale * movespeed;
             squashX = 1.3;
             squashY = 0.8;
-            
-            if (grounded)
-            {
-                if (movespeed < 20)
-                    movespeed++;
-            }
         }
-        else if (character == UnknownEnum.Value_5 && sprite_index == sprites.dive)
+        else if (character == UnknownEnum.Value_7 && sprite_index == sprites.dive)
         {
             xscale *= -1;
             create_particleStatic(spr_dreambounceeffect, x, y, 1, -2);
@@ -236,6 +263,7 @@ function scr_player_tumble()
             image_index = 0;
         }
     }
+    
     
     if (!global.pky_down && !scr_solid(x, y - 16) && grounded && (crouchslip <= 0 || skatenic_is_tornado()))
     {
