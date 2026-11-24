@@ -17,11 +17,7 @@ if (audio_is_playing(sound))
     done = true;
     image_blend = c_white;
     
-    with (obj_music)
-        fmod_studio_event_instance_set_volume(escapeInst, 0.25);
-    
- //   with (obj_music)
-  //      audio_sound_gain(musicGm, 0.25);
+
     
     with (obj_player)
         visible = false;
@@ -38,7 +34,7 @@ if (audio_is_playing(sound))
     var _frm_mil_m5 = 21;
     var _frm_mil_m6 = 23;
     var _t = audio_sound_get_track_position(sound);
-    
+    	fmod_studio_system_set_parameter_by_name("musicfade",  1, false);
     if (_t > 0.29 && _t < 2.68)
     {
         image_index = _frm_par + ((current_time % 150) < 75);
@@ -175,8 +171,9 @@ else if (sprite_index == spr_partyportal_coolguy_intro && !done)
     image_blend = merge_colour(#998E83, c_white, clamp(image_index / 5, 0, 1));
     y = lerp(y, 154, 0.035);
     
-    with (obj_music)
-        fmod_studio_event_instance_set_volume(escapeInst, 1 - (clamp(image_index / 5, 0, 1) * 0.75));
+
+	fmod_studio_system_set_parameter_by_name("musicfade",  0+  (clamp(image_index / 5, 0, 1) * 0.75), false);
+
     
     with (obj_player)
     {
@@ -197,10 +194,7 @@ else if (sprite_index == spr_partyportal_coolguy_intro && done)
     ds_list_clear(global.escaperoom);
 	 ds_list_add(global.saveroom, id);
     global.escapeLap = 2;
-	    with (obj_music)
-    fmod_studio_event_instance_set_volume(escapeInst, 1)
-   // with (obj_music)
-        //audio_sound_gain(musicGm, audio_sound_get_gain(mu_lap2_bacon5), 1000);
+fmod_studio_system_set_parameter_by_name("musicfade", 0, false);
      global.collect += 3000
     with (obj_player)
     {

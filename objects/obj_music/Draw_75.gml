@@ -10,7 +10,11 @@ else if audio_exists(global.music) && audio_sound_get_asset(global.music) == mu_
 	_file = "mu_sodalap1"
 	captions.curtime = audio_sound_get_track_position(global.music)
 }
-
+ if audio_exists(global.music) && audio_sound_get_asset(global.music) == mu_bacon5lap2
+{
+	_file = "mu_bacon5lap2"
+	captions.curtime = audio_sound_get_track_position(global.music)
+}
 if captions.file != _file
 {
 	if _file == ""

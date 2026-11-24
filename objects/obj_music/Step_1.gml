@@ -79,7 +79,7 @@ else
         
         if (global.escapeLap == 2)
         {
-            var _arr = [[UnknownEnum.Value_2, mu_miltonlap2], [10, mu_skateniclap2], [UnknownEnum.Value_3, mu_peppernilap2], [UnknownEnum.Value_8, mu_sodalap2], [UnknownEnum.Value_4, mu_baconcrashlap2], [UnknownEnum.Value_5, mu_bacondreamlap2], [UnknownEnum.Value_6, mu_baconredemlap2], [UnknownEnum.Value_7, mu_bacontwistlap2]];
+            var _arr = [[UnknownEnum.Value_2, mu_miltonlap2], [10, mu_skateniclap2], [UnknownEnum.Value_3, mu_peppernilap2], [UnknownEnum.Value_8, mu_sodalap2], [UnknownEnum.Value_4, mu_baconcrashlap2], [UnknownEnum.Value_5, mu_bacondreamlap2], [UnknownEnum.Value_6, mu_baconredemlap2], [UnknownEnum.Value_7, mu_bacontwistlap2], [chars.bacon5, mu_bacon5lap2]];
             
             if (instance_exists(obj_player))
             {
