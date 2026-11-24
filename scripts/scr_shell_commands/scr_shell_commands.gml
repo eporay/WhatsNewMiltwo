@@ -144,6 +144,20 @@ function sh_toggle_flipped(arg0)
     return $"flipped is now {global.modifiers.flipped}";
 }
 
+function meta_player_pal()
+{
+    return 
+    {
+        description: "change pal",
+        arguments: ["pal"]
+    };
+}
+
+function sh_player_pal(arg0)
+{
+  obj_player.palIndex = real(arg0[1])
+  
+}
 function meta_ranktest()
 {
     return 
